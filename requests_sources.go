@@ -3074,20 +3074,20 @@ type TakeSourceScreenshotRequest struct {
 	// Format of the Data URI encoded picture.
 	// Can be "png", "jpg", "jpeg" or "bmp" (or any other value supported by Qt's Image module).
 	// Required: No.
-	EmbedPictureFormat string `json:"embedPictureFormat"`
+	EmbedPictureFormat string `json:"embedPictureFormat,omitempty"`
 	// Full file path (file extension included) where the captured image is to be saved.
 	// Can be in a format different from `pictureFormat`.
 	// Can be a relative path.
 	// Required: No.
-	SaveToFilePath string `json:"saveToFilePath"`
+	SaveToFilePath string `json:"saveToFilePath,omitempty"`
 	// Screenshot width.
 	// Defaults to the source's base width.
 	// Required: No.
-	Width int `json:"width"`
+	Width int `json:"width,omitempty"`
 	// Screenshot height.
 	// Defaults to the source's base height.
 	// Required: No.
-	Height   int `json:"height"`
+	Height   int `json:"height,omitempty"`
 	_request `json:",squash"`
 	response chan TakeSourceScreenshotResponse
 }
